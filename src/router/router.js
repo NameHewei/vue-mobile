@@ -4,13 +4,25 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 const Navigation = () => import('../views/layout/Navigation.vue')
+const Camera = () => import('../views/html5Device/Camera.vue')
+const GeolocationU = () => import('../views/html5Device/Geolocation.vue')
 
 export default new Router({
     routes: [
         {
             path: '/',
             name: 'navigation',
-            component: Navigation
+            component: Navigation,
+            children: [
+                {
+                    path: 'camera',
+                    component: Camera
+                },
+                {
+                    path: 'geolocation',
+                    component: GeolocationU
+                }
+            ]
         }
         // {
         //     path: '/about',

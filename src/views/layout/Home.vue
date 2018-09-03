@@ -7,7 +7,7 @@
             </div>
         </v-ons-toolbar>
         <p style="text-align: center">
-            Welcome home.
+            this is home page
         </p>
     </v-ons-page>
 </template>
