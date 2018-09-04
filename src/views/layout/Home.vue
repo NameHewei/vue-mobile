@@ -2,7 +2,7 @@
     <v-ons-page>
         <v-ons-toolbar>
             <div class="center">{{ title }}</div>
-            <div class="left" @click="handleCallback">
+            <div class="left" @click="handleOpenSide">
                 <img src="@/assets/head.png" alt="no" class="user-img">
             </div>
         </v-ons-toolbar>
@@ -13,6 +13,8 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
     name: 'home',
     data () {
@@ -22,8 +24,10 @@ export default {
     },
 
     methods: {
-        handleCallback () {
-            this.$emit('toggleMenu')
+        ...mapActions('common', ['updateOpenSide']),
+
+        handleOpenSide () {
+            this.updateOpenSide()
         }
     }
 }

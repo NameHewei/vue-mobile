@@ -4,6 +4,8 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 const Navigation = () => import('../views/layout/Navigation.vue')
+const Home = () => import('../views/layout/Home.vue')
+const Device = () => import('../views/html5Device/Device.vue')
 const Camera = () => import('../views/html5Device/Camera.vue')
 const GeolocationU = () => import('../views/html5Device/Geolocation.vue')
 
@@ -11,15 +13,26 @@ export default new Router({
     routes: [
         {
             path: '/',
-            name: 'navigation',
             component: Navigation,
             children: [
                 {
+                    path: '',
+                    name: 'home',
+                    component: Home
+                },
+                {
+                    path: 'device',
+                    name: 'device',
+                    component: Device
+                },
+                {
                     path: 'camera',
+                    name: 'camera',
                     component: Camera
                 },
                 {
                     path: 'geolocation',
+                    name: 'geolocation',
                     component: GeolocationU
                 }
             ]
