@@ -85,19 +85,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .side-user{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 80px;
-        background-color: #ffffff;
-        >div{
-
-            height: 60px;
-            width: 60px;
-            background: url("https://images.unsplash.com/photo-1531251445707-1f000e1e87d0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f9b027f1ae70f3c65ec0337c710438c7&auto=format&fit=crop&w=500&q=60") no-repeat center/cover;
-            border-radius: 50%;
-        }
-    }
+    @import "@/style/layout/navigation.scss";
 </style>
