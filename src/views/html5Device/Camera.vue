@@ -12,44 +12,43 @@
     <div class="touch-event" @touchstart="touchstart">
       <h2>touch-event</h2>
       <div>{{touchMsg}}</div>
-    </div>    
+    </div>
   </div>
 </template>
 <script>
-  export default {
+export default {
     name: 'HelloWorld',
-    data() {
-      return {
-        s: '',
-        d: '',
-        url: '',
-        url1: '',
-        touchMsg: ''
-      }
+    data () {
+        return {
+            s: '',
+            d: '',
+            url: '',
+            url1: '',
+            touchMsg: ''
+        }
     },
 
-    mounted() {
-    
+    mounted () {
+
     },
 
     methods: {
-      fileChange(e) {
-        const file = e.target.files[0]
-        const url = window.URL.createObjectURL(file);
-        const reader = new FileReader();
-        reader.onload = (e) => {
-            this.url1 = e.target.result;
-        };
-        reader.readAsDataURL(file);
-        this.url = url;
-        
-      },
+        fileChange (e) {
+            const file = e.target.files[0]
+            const url = window.URL.createObjectURL(file)
+            const reader = new FileReader()
+            reader.onload = (e) => {
+                this.url1 = e.target.result
+            }
+            reader.readAsDataURL(file)
+            this.url = url
+        },
 
-      touchstart(e){
-        this.touchMsg = e.altKey
-      }
+        touchstart (e) {
+            this.touchMsg = e.altKey
+        }
     }
-  }
+}
 </script>
 
 <style scoped>

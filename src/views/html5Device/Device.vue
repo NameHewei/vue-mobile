@@ -14,7 +14,7 @@
         <v-ons-list>
             <v-ons-list-item @click="routerSkip('camera')" modifier="chevron" tappable>camera</v-ons-list-item>
             <v-ons-list-item @click="routerSkip('geolocation')" modifier="chevron" tappable>geolocation</v-ons-list-item>
-            <v-ons-list-item @click="routerSkip('camera')" modifier="chevron" tappable>TouchEvents</v-ons-list-item>
+            <v-ons-list-item @click="routerSkip('touchEvent')" modifier="chevron" tappable>TouchEvents</v-ons-list-item>
         </v-ons-list>
 
     </v-ons-page>

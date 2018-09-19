@@ -9,6 +9,7 @@ const Login = () => import('../views/login/Login.vue')
 const Device = () => import('../views/html5Device/Device.vue')
 const Camera = () => import('../views/html5Device/Camera.vue')
 const GeolocationU = () => import('../views/html5Device/Geolocation.vue')
+const TouchEvents = () => import('../views/html5Device/TouchEvents.vue')
 
 export default new Router({
     routes: [
@@ -40,6 +41,11 @@ export default new Router({
                     path: 'geolocation',
                     name: 'geolocation',
                     component: GeolocationU
+                },
+                {
+                    path: 'touchEvent',
+                    name: 'touchEvent',
+                    component: TouchEvents
                 }
             ]
         }
